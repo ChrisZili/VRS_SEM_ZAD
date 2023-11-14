@@ -1,6 +1,6 @@
 EOD BOT Mk. 2 špecifikácia
 
-	Jedná sa o UGW riadené pomocou PC a ovládača. Počítač komunikuje cez PC pomocou Raspberry pi 4 cez uzavretú lokálnu WiFi sieť, ktorú si budeme vytvárať vlastným access pointom. RPI komunikuje s mikrokontrolérom(mi) STM pomocou USART zbernice.
+Jedná sa o UGW riadené pomocou PC a ovládača. Počítač komunikuje cez PC pomocou Raspberry pi 4 cez uzavretú lokálnu WiFi sieť, ktorú si budeme vytvárať vlastným access pointom. RPI komunikuje s mikrokontrolérom(mi) STM pomocou USART zbernice.
  Mikrokontroléry budú mať na starosti 
 -	Riadenie hnacích motorov (2x 12/24V DC) pomocou PWM signálov
 -	Zber dát zo senzorov (IR senzory po bokoch ako detekcia prekážky, teplomery, GPS, laserový diaľkomer, gyroskop...[TBD])
