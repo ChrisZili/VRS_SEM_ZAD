@@ -1,0 +1,3 @@
+#define BH1 200
+#define COMM_TIMEOUT 65000
+#define DEADZONE_MOTORS 20

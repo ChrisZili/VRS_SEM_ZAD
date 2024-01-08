@@ -1,0 +1,2 @@
+../Core/Src/garminLidar.c:7:6:configuration_set	7
+../Core/Src/garminLidar.c:71:5:Get_distance	1
