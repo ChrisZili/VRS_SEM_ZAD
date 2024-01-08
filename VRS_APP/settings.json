@@ -1,0 +1,735 @@
+{
+    "app_name": "VRS - Mobile Robot",
+    "version": "v1.0.0",
+    "copyright": "By: Christian Zilincar",
+    "year": 2023,
+    "theme_name": "default",
+    "custom_title_bar": true,
+    "startup_size": [
+        1250,
+        900
+    ],
+    "minimum_size": [
+        960,
+        540
+    ],
+    "lef_menu_size": {
+        "minimum": 50,
+        "maximum": 240
+    },
+    "left_menu_content_margins": 3,
+    "left_column_size": {
+        "minimum": 0,
+        "maximum": 240
+    },
+    "right_column_size": {
+        "minimum": 0,
+        "maximum": 240
+    },
+    "time_animation": 75,
+    "font": {
+        "family": "Segoe UI",
+        "title_size": 10,
+        "text_size": 9
+    },
+    "music_folder": "music",
+    "message_codes": {
+        "finish": 204,
+        "reset": 205,
+        "activation": 103,
+        "master_reset": 99,
+        "get_states": 98,
+        "play_sound": 208,
+        "10_min_action": {
+            "sound": 103,
+            "light": 104
+        },
+        "task_sound": {
+            "volume": 207,
+            "on": "1",
+            "off": "2",
+            "value": 50
+        },
+        "master_sounds": [
+            {
+                "name": "case_sound",
+                "volume": 208,
+                "text": "Hlasitos\u0165 \u00faloh",
+                "value": 76
+            },
+            {
+                "name": "comentaator_sound",
+                "volume": 209,
+                "text": "Hlastitost komentatora",
+                "value": 61
+            },
+            {
+                "name": "music_sound",
+                "volume": 210,
+                "text": "Hlasitost hudby",
+                "value": 67
+            }
+        ],
+        "light": {
+            "volume": 206,
+            "on": "3",
+            "off": "4",
+            "value": 98
+        },
+        "commentator_sound": 207,
+        "maintenance": 100,
+        "new_game": 101
+    },
+    "slider_message_codes": {},
+    "jump_scares": {
+        "hallway": {
+            "name": "hallway",
+            "text": "Chodba",
+            "buttons": [
+                {
+                    "name": "drawer",
+                    "text": "\u0160ufl\u00edk",
+                    "message_code": 301,
+                    "task_code": 2
+                },
+                {
+                    "name": "mirror",
+                    "text": "Zrkadlo",
+                    "message_code": 301,
+                    "task_code": 2
+                }
+            ]
+        },
+        "kitchen": {
+            "name": "kitchen",
+            "text": "Kuchy\u0148a",
+            "task_code": 1,
+            "buttons": [
+                {
+                    "name": "door",
+                    "text": "Dvierka",
+                    "message_code": 301,
+                    "task_code": 4
+                },
+                {
+                    "name": "spider",
+                    "text": "Pav\u00fak",
+                    "message_code": 301,
+                    "task_code": 4
+                },
+                {
+                    "name": "drawer",
+                    "text": "\u0160ufl\u00edk",
+                    "message_code": 301,
+                    "task_code": 3
+                }
+            ]
+        },
+        "bedroom": {
+            "name": "bedroom",
+            "text": "Sp\u00e1l\u0148a",
+            "task_code": 1,
+            "buttons": [
+                {
+                    "name": "sofa",
+                    "text": "Kreslo",
+                    "message_code": 301,
+                    "task_code": 14
+                },
+                {
+                    "name": "cross",
+                    "text": "Kr\u00ed\u017e",
+                    "message_code": 301,
+                    "task_code": 14
+                },
+                {
+                    "name": "bed_left",
+                    "text": "Poste\u013e L",
+                    "message_code": 301,
+                    "task_code": 14
+                },
+                {
+                    "name": "bed_right",
+                    "text": "Poste\u013e P",
+                    "message_code": 301,
+                    "task_code": 14
+                }
+            ]
+        },
+        "demons": {
+            "name": "demons",
+            "text": "D\u00e9moni",
+            "task_code": 1,
+            "buttons": [
+                {
+                    "name": "demon1",
+                    "text": "D\u00e9mon 1",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "demon2",
+                    "text": "D\u00e9mon 2",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "demon3",
+                    "text": "D\u00e9mon 3",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "demon4",
+                    "text": "D\u00e9mon 4",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "demon5",
+                    "text": "D\u00e9mon 5",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "demon6",
+                    "text": "D\u00e9mon 6",
+                    "message_code": 307,
+                    "task_code": 1
+                }
+            ]
+        },
+        "screams": {
+            "name": "screams",
+            "text": "V\u00fdkriky",
+            "buttons": [
+                {
+                    "name": "scram1",
+                    "text": "V\u00fdkrik 1",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "scram2",
+                    "text": "V\u00fdkrik 2",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "scream3",
+                    "text": "V\u00fdkrik 3",
+                    "message_code": 307,
+                    "task_code": 1
+                },
+                {
+                    "name": "scream4",
+                    "text": "V\u00fdkrik 4",
+                    "message_code": 307,
+                    "task_code": 1
+                }
+            ]
+        }
+    },
+    "tasks": [
+        {
+            "id": 1,
+            "name": "task1",
+            "text": "Uloha 1",
+            "task_code": 1,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 0
+            }
+        },
+        {
+            "id": 2,
+            "name": "task2",
+            "text": "Uloha 2",
+            "task_code": 2,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 3,
+            "name": "task3",
+            "text": "Uloha 3",
+            "task_code": 3,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 4,
+            "name": "task4",
+            "text": "Uloha 4",
+            "task_code": 4,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": false,
+                "value": 50
+            }
+        },
+        {
+            "id": 5,
+            "name": "task5",
+            "text": "Uloha 5",
+            "task_code": 5,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 6,
+            "name": "task6",
+            "text": "Uloha 6",
+            "task_code": 6,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": false,
+                "value": 50
+            }
+        },
+        {
+            "id": 7,
+            "name": "task7",
+            "text": "Uloha 7",
+            "task_code": 7,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 8,
+            "name": "task8",
+            "text": "Uloha 8",
+            "task_code": 8,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 9,
+            "name": "task9",
+            "text": "Uloha 9",
+            "task_code": 9,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 10,
+            "name": "task10",
+            "text": "Uloha 10",
+            "task_code": 10,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 11,
+            "name": "task11",
+            "text": "Uloha 11",
+            "task_code": 11,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": false,
+                "value": 50
+            }
+        },
+        {
+            "id": 12,
+            "name": "task12",
+            "text": "Uloha 12",
+            "task_code": 12,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 13,
+            "name": "task13",
+            "text": "Uloha 13",
+            "task_code": 13,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 14,
+            "name": "task14",
+            "text": "Uloha 14",
+            "task_code": 14,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        },
+        {
+            "id": 15,
+            "name": "task15",
+            "text": "Uloha 15",
+            "task_code": 15,
+            "buttons": {
+                "core_buttons": [
+                    {
+                        "name": "indication_button",
+                        "text": ""
+                    },
+                    {
+                        "name": "reset_button",
+                        "text": "Resetuj ulohu"
+                    },
+                    {
+                        "name": "finish_button",
+                        "text": "Dokoncit ulohu"
+                    }
+                ],
+                "additional_buttons": [
+                    {
+                        "name": "activation_button",
+                        "text": "Aktivovat rakvu",
+                        "activation": 103
+                    },
+                    {
+                        "name": "commentator_button",
+                        "text": "Napoveda",
+                        "message_code": 207
+                    }
+                ]
+            },
+            "sounds": {
+                "active": true,
+                "value": 76
+            }
+        }
+    ]
+}

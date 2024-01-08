@@ -1,0 +1,1 @@
+from .senzor_widget import SenzorWidget

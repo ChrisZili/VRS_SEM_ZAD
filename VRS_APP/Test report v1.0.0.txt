@@ -1,0 +1,23 @@
+Bugy na windowse (na macu ide pekne ako ma)
+-cele UIčko je rozjebane jak islamske dieta po výbuchu
+-centrovanie nápisov tlačidiel, 
+-potvrdzovacie okno sa zobrazuje strašne male a neni tam nič napisane
+-zly scaling po spusteni
+- na velkych monitoroch vo fullscreene rozjebe scaling ešte viac
+- vo zvukoch pri slideroch a prepinacoch chybaju labels
+
+Funkcionalita a design
+
+Home tab:
+-prerobime labels na tlacidlach (TBD)
+-klikatelne svetielka - Opravene
+-nemame master reset - Opravene
+
+Zvuky:
+-k zvukom by okrem slideru bolo dobre dat aj ciselny ukazovatel
+- prekopeme UI zvukov (TBD)
+
+-Others
+-konzola na pozadi je dost otravná
+-treba sa dohodnut na verziovaní
+-zacat pouzivat semantic commity lebo ked sa to zväčší tak sa v tom stratime jak decko v lunaparku
