@@ -8,9 +8,10 @@ Jedná sa o pásové UGW riadené pomocou PC a ovládača. Počítač komunikuje
 -	Riadenie hnacích motorov (2x 12/24V DC) pomocou PWM signálov
 -	Zber dát zo senzorov (Ultrazvukový senzor, teplomer, laserový diaľkomer, gyroskop (prone to changes))
 -	Kamera na servách pre ovladanie osí X a Y pomocou servomodulu cez I2C
+
 RPI bude mať na starosti:
-  -	Kameru
-  -	Prenos dát medzi PC a STM
+   -	Kameru
+   -	Prenos dát medzi PC a STM
 
 Riadiaca aplikácia
 -	Zobrazovanie obrazu a telemetrie (graficky, textovo)
