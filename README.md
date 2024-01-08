@@ -17,4 +17,3 @@ Riadiaca aplikácia
 -	Zobrazovanie obrazu a telemetrie (graficky, textovo)
 -	Spracovavať vstupy z joysticku (generic Xbox360 controller)
 -	Komunikaciu po lokalnej wifi sieti s RPI
-
