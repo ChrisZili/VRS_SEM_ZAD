@@ -89,6 +89,7 @@ class MainWindow(QMainWindow):
         self.range_sensor = SetupMainWindow.get_range_sensor(self)
         self.temperature_sensor = SetupMainWindow.get_temperature_sensor(self)
         self.humidity_sensor = SetupMainWindow.get_humidity_sensor(self)
+        self.backing_sensor = SetupMainWindow.get_backing_sensor(self)
         # ////////////////////////////////////////////////////////////////
         # //////////////////    GET HANDLERS  ////////////////////////////
         # ///////////////////////////////////////////////////////////////
@@ -361,6 +362,10 @@ class MainWindow(QMainWindow):
             number = self.extract_number(message)
             if number is not None:
                 self.humidity_sensor.update_value(number)
+        if message[0] == "R":
+            number = self.extract_number(message)
+            if number is not None:
+                self.backing_sensor.updare_backing_sensor(number)
 
 
 

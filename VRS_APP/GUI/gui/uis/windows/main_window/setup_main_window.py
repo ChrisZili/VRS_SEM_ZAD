@@ -253,7 +253,7 @@ class SetupMainWindow:
         self.tempeture_sensor = SenzorWidget(self, self.connect_button_clicked, "Tempeture sensor", "°C")
         self.humidity_sensor = SenzorWidget(self, self.connect_button_clicked, "Humidity sensor", "%")
         self.camera_widget = CameraWidget()
-        self.backing_sensor_widget = BackingSensorWidget(self)
+        self.backing_sensor = BackingSensorWidget(self)
 
         # ///////////////////////////////////////////////////////////////
         # ///////////////// ADD LOGO TO MAIN PAGE      /////////////////
@@ -271,7 +271,7 @@ class SetupMainWindow:
         self.ui.load_pages.task_layout_row1.addWidget(self.tempeture_sensor)
         self.ui.load_pages.task_layout_row1.addWidget(self.humidity_sensor)
         self.ui.load_pages.task_layout_row2.addWidget(self.camera_widget, Qt.AlignCenter, Qt.AlignCenter)
-        self.ui.load_pages.task_layout_row2.addWidget(self.backing_sensor_widget, Qt.AlignCenter, Qt.AlignCenter)
+        self.ui.load_pages.task_layout_row2.addWidget(self.backing_sensor, Qt.AlignCenter, Qt.AlignCenter)
 
         # ///////////////////////////////////////////////////////////////
         # ///////////////   SECOND ROW LAYOUT      ///////////////////////
@@ -405,3 +405,6 @@ class SetupMainWindow:
 
     def get_humidity_sensor(self):
         return self.humidity_sensor
+
+    def get_backing_sensor(self):
+        return self.backing_sensor

@@ -44,25 +44,62 @@ class BackingSensorWidget(QWidget):
         # Change colors of rectangles
         new_colors = [Qt.blue, Qt.magenta, Qt.cyan, Qt.darkGreen, Qt.darkRed]
         for i, color in enumerate(new_colors):
-            self.rectangles[i]["color"] = color
+            self.rectangles[i]["color"] = self.grey
         self.update()  # Update the widget to reflect the new colors
 
-    def change_last_rectangle_color(self):
-        self.rectangles[-1]["color"] = Qt.green
+    def change_last_rectangle_color(self,color):
+        self.rectangles[-1]["color"] = color
         self.update()
 
-    def change_4th_rectangle_color(self, color):
-        self.rectangles[3]["color"] = Qt.darkGreen
+    def change_4th_rectangle_color(self,color):
+        self.rectangles[3]["color"] = color
         self.update()
 
-    def change_3rd_rectangle_color(self, color):
-        self.rectangles[2]["color"] = self.orange
+    def change_3rd_rectangle_color(self,color):
+        self.rectangles[2]["color"] = color
         self.update()
 
-    def change_2nd_rectangle_color(self, color):
-        self.rectangles[1]["color"] = Qt.red
+    def change_2nd_rectangle_color(self,color):
+        self.rectangles[1]["color"] = color
         self.update()
 
-    def change_1st_rectangle_color(self, color):
-        self.rectangles[0]["color"] = Qt.red
+    def change_1st_rectangle_color(self,color):
+        self.rectangles[0]["color"] = color
         self.update()
+
+    def updare_backing_sensor(self, value):
+        if value > 61:
+            self.change_colors()
+        elif 60 >= value > 50 :
+            self.change_1st_rectangle_color(self.grey)
+            self.change_2nd_rectangle_color(self.grey)
+            self.change_3rd_rectangle_color(self.grey)
+            self.change_4th_rectangle_color(self.grey)
+            self.change_last_rectangle_color(Qt.green)
+        elif 50 >= value > 40:
+            self.change_1st_rectangle_color(self.grey)
+            self.change_2nd_rectangle_color(self.grey)
+            self.change_3rd_rectangle_color(self.grey)
+            self.change_4th_rectangle_color(Qt.green)
+            self.change_last_rectangle_color(Qt.green)
+        elif 40 >= value > 30:
+            self.change_1st_rectangle_color(self.grey)
+            self.change_2nd_rectangle_color(self.grey)
+            self.change_3rd_rectangle_color(self.orange)
+            self.change_4th_rectangle_color(Qt.green)
+            self.change_last_rectangle_color(Qt.green)
+        elif 30 >= value > 20:
+            self.change_1st_rectangle_color(self.grey)
+            self.change_2nd_rectangle_color(Qt.red)
+            self.change_3rd_rectangle_color(self.orange)
+            self.change_4th_rectangle_color(Qt.green)
+            self.change_last_rectangle_color(Qt.green)
+        elif 10 > value > 0:
+            self.change_1st_rectangle_color(Qt.darkRed)
+            self.change_2nd_rectangle_color(Qt.red)
+            self.change_3rd_rectangle_color(self.orange)
+            self.change_4th_rectangle_color(Qt.green)
+            self.change_last_rectangle_color(Qt.green)
+        elif value <= 0:
+            self.change_colors()
+
