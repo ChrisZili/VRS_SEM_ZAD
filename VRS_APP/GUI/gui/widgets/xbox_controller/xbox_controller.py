@@ -61,28 +61,35 @@ class XboxController():
         return motor1, motor2
 
 
-    def fill_caracters(self, number):
-        if number is not None:
-            if str(number).__len__() == 1:
+    def fill_caracters(self, number, camera=False):
+        num = number
+        if num is not None:
+            if not camera:
+                if 20 > num > 0:
+                    num = 0
+                if -20 < num < 0:
+                    num = 0
+            if str(num).__len__() == 1:
                 sign = self.get_sign(number)
                 if sign == "-":
-                    return sign + "00" + str(number).replace(sign, "")
+                    return sign + "00" + str(num).replace(sign, "")
                 else:
 
-                    return sign +"00" + str(number)
-            if str(number).__len__() == 2:
-                sign = self.get_sign(number)
-                number_str = str(number)
+                    return sign +"00" + str(num)
+            if str(num).__len__() == 2:
+                sign = self.get_sign(num)
+                number_str = str(num)
                 if sign == "-":
                     return sign + "00" + number_str.replace(sign, "")
                 else:
                     return sign+"0" + number_str
-            if str(number).__len__() == 3:
-                sign = self.get_sign(number)
+            if str(num).__len__() == 3:
+                sign = self.get_sign(num)
                 if sign == "-":
-                    return sign + "0" + str(number).replace(sign, "")
+                    return sign + "0" + str(num).replace(sign, "")
                 else:
-                    return sign+ str(number)
+                    return sign+ str(num)
+
 
 
 
@@ -99,8 +106,8 @@ class XboxController():
         return msg
 
     def convert_to_camera(self, x, y):
-        u = self.fill_caracters(round(x*4))
-        r = self.fill_caracters(round((y*-4)))
+        u = self.fill_caracters(round(x*4), True)
+        r = self.fill_caracters(round((y*-4)), True)
         if u is not None and r is not None:
             msg = "X" + u + "Y" + r
 
